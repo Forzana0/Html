@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #4CAF50; /* зелений колір меню */
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropdown-content a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #45a049; /* темніший колір при наведенні */
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #4CAF50;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content .submenu {
+            display: none;
+            position: absolute;
+            background-color: #45a049; /* темніший колір підменю при наведенні */
+            min-width: 160px;
+            left: 100%;
+            top: 0;
+        }
+
+        .submenu a {
+            padding: 12px 16px;
+        }
+
+        .dropdown-content:hover .submenu {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #45a049; /* темніший колір підменю при наведенні */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Categories</a>
+            <div class="dropdown-content">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <div class="submenu">
+                    <a href="#">Jacket</a>
+                    <a href="#">Boots</a>
+                    <a href="#">Jeans</a>
+                </div>
+                <div class="submenu">
+                    <a href="#">Dress</a>
+                    <a href="#">Pants</a>
+                    <a href="#">Shoes</a>
+                </div>
+                <div class="submenu">
+                    <a href="#">Trainers</a>
+                    <a href="#">Hats</a>
+                    <a href="#">T-Shirts</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacts</a></li>
+    </ul>
+
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et odio id libero scelerisque volutpat...</p>
+    </div>
+
+</body>
+</html>
